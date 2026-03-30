@@ -74,13 +74,13 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative w-[280px] sm:w-[350px] lg:w-full max-w-[420px] aspect-[4/5] z-10"
             >
-              {/* Decorative floating blurred backgrounds behind the image */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-blue-100 to-purple-100 rounded-[2.5rem] blur-2xl opacity-70"></div>
+              {/* Decorative background glow moved back with -z-10 and lower opacity */}
+              <div className="absolute -inset-10 bg-gradient-to-tr from-blue-200 to-purple-200 rounded-[3rem] blur-3xl opacity-30 -z-10"></div>
 
-              <div className="relative w-full h-full p-2 bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden group">
+              <div className="relative z-10 w-full h-full p-2 bg-white rounded-[2rem] shadow-2xl border border-slate-100 overflow-hidden group">
                 <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-slate-100">
                   <Image
-                    src="/logo/Professional Portrait of a Young Man.png"
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo/Professional Portrait of a Young Man.png`}
                     alt="Likith Kumar D K"
                     fill
                     sizes="(max-width: 768px) 280px, (max-width: 1200px) 350px, 420px"
